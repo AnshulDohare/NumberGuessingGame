@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_number_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Number Guessing Game"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="#D32F2F"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/text_thinking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:text="I'm thinking of a number between 1 and 10.\nYou have 5 tries to guess the number."
+        tools:ignore="HardcodedText,KeyboardInaccessibleWidget"/>
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        android:hint="Enter Number"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_margin="5dp"
+        android:background="@drawable/et_back"
+        tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/et_back"
+        android:textStyle="bold"
+        android:text="Submit"
+        android:layout_marginTop="10dp"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/text_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#F3F3F3"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/Theme.NumberGame">
+        <TextView
+            android:id="@+id/text_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="History"
+            android:paddingLeft="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,ScrollViewSize" />
+    </ScrollView>
+
+</LinearLayout>
